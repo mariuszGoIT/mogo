@@ -1,0 +1,98 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.hero {
+  height: 100vh;
+  background: $pink-yellow-gradient,
+    url("/assets/photos/hero.jpg") no-repeat center / cover;
+  padding-top: 30px;
+
+  &__container {
+    @include flex(column, 20px, unset, space-between);
+
+    height: 100%;
+    padding-bottom: 50px;
+  }
+
+  &__slogan {
+    width: 800px;
+    margin-inline: auto;
+
+    p {
+      color: $white-color;
+      text-align: center;
+
+      &:first-of-type {
+        font-size: 72px;
+        font-weight: 700;
+        font-family: $secondary-font;
+        margin-bottom: 20px;
+      }
+
+      &:last-of-type {
+        font-size: 130px;
+        font-weight: 700;
+        line-height: 0.8;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__btn {
+    margin-inline: auto;
+  }
+}
+
+.header {
+  @include flex(row, 50px, center, space-between);
+
+  color: $white-color;
+
+  &__logo {
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
+.nav {
+  &__list {
+    @include flex(row, 50px, center, space-between);
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+
+    &:not(:has(.nav__icon))::after {
+      @include position(absolute, 120%, 0, 0 100%);
+
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: $yellow-color;
+      border-radius: 20px;
+      transition: all 200ms;
+      scale: 0;
+    }
+
+    &:hover {
+      transition: all 200ms;
+      color: $yellow-color;
+
+      &:not(:has(.nav__icon))::after {
+        scale: 1;
+      }
+    }
+  }
+
+  &__icons {
+    @include flex(row, 30px, center, space-between);
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
