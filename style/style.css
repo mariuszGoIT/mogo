@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;700&family=Roboto:ital@1&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;700&family=Roboto:ital,wght@0,400;1,100;1,300&display=swap";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,6 +32,21 @@ body {
   font-family: var(--primary-font);
 }
 
+.section-header {
+  color: var(--gray-dark);
+  text-align: center;
+}
+.section-header p {
+  font-family: var(--secondary-font);
+  font-size: 24px;
+}
+.section-header h2 {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .container {
   width: 1200px;
   margin-inline: auto;
@@ -54,6 +69,13 @@ body {
 .btn--primary:hover {
   background-color: var(--white);
   color: var(--pink);
+}
+
+hr {
+  width: 60px;
+  height: 5px;
+  background-color: var(--pink);
+  border-radius: 10px;
 }
 
 .hero {
@@ -151,4 +173,41 @@ body {
 .nav__icon {
   width: 20px;
   height: 20px;
+}
+
+.services {
+  margin-top: 40px;
+}
+.services__line {
+  margin: 40px auto 60px;
+}
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+  row-gap: 100px;
+}
+.services__grid-element {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: unset;
+}
+
+.element__icon {
+  width: 30px;
+  height: 30px;
+}
+.element__heading {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.element__paragraph {
+  font-family: var(--third-font);
+  font-size: 15px;
+  color: var(--gray);
 }/*# sourceMappingURL=style.css.map */
