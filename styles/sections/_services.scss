@@ -24,14 +24,13 @@
   &__icon {
     width: 30px;
     height: 30px;
-    // TODO color
   }
 
   &__heading {
+    margin-bottom: 15px;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 15px;
   }
 
   &__paragraph {

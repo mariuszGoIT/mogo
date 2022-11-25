@@ -90,10 +90,10 @@
   }
 
   &__item {
+    position: relative;
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
-    position: relative;
   }
 
   &__icons {

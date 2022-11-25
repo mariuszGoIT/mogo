@@ -1,12 +1,12 @@
 @use "../variables" as *;
 
 .btn {
-  border: none;
   background-color: transparent;
-  color: white;
+  border: none;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
+  color: white;
   cursor: pointer;
   transition: all 200ms;
 
@@ -27,8 +27,8 @@
   }
 
   &--secondary {
-    padding: 15px 35px;
     background-color: $green-color;
+    padding: 15px 35px;
 
     &:hover,
     &:focus {

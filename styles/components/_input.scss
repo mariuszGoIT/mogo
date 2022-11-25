@@ -1,14 +1,12 @@
 @use "../variables" as *;
 
 input {
-  padding: 13px 35px;
+  padding: 13px 10px;
   border: 2px solid $gray-light-color;
   color: $gray-color;
 
   &::placeholder {
-    font-size: 15px;
-    font-family: $third-font;
-    font-style: italic;
+    font: italic 15px $third-font;
     color: $gray-light-color;
   }
 
