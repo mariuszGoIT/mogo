@@ -59,13 +59,8 @@
     @include flex(row, 50px, center, space-between);
   }
 
-  &__item {
-    font-weight: 500;
-    font-size: 14px;
-    text-transform: uppercase;
-    position: relative;
-
-    &:not(:has(.nav__icon))::after {
+  &__link {
+    &::after {
       @include position(absolute, 120%, 0, 0 100%);
 
       content: "";
@@ -77,14 +72,28 @@
       scale: 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       transition: all 200ms;
       color: $yellow-color;
+      outline: none;
 
       &:not(:has(.nav__icon))::after {
         scale: 1;
       }
+
+      .nav__icon {
+        filter: brightness(0) saturate(100%) invert(88%) sepia(82%)
+          saturate(400%) hue-rotate(321deg) brightness(102%) contrast(98%);
+      }
     }
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
   }
 
   &__icons {

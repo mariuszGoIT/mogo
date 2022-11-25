@@ -13,6 +13,7 @@
     &:hover {
       .socials {
         opacity: 1;
+        visibility: visible;
       }
 
       img:not(.socials__icon) {
@@ -69,6 +70,7 @@
   background-color: $yellow-color;
   width: fit-content;
   opacity: 0;
+  visibility: hidden;
   transition: all 200ms;
 
   &__button {
@@ -78,8 +80,10 @@
       border-right: 1px solid $pink-color;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $pink-color;
+      outline: none;
 
       .socials__icon {
         filter: brightness(100);
