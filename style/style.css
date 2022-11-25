@@ -210,4 +210,18 @@ hr {
   font-family: var(--third-font);
   font-size: 15px;
   color: var(--gray);
+}
+
+.about {
+  margin-top: 100px;
+}
+.about__line {
+  margin: 40px auto;
+}
+.about__paragraph {
+  width: 950px;
+  margin-inline: auto;
+  font-size: 15px;
+  text-align: center;
+  color: var(--gray);
 }/*# sourceMappingURL=style.css.map */
