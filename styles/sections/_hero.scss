@@ -4,7 +4,7 @@
 .hero {
   height: 100vh;
   background: $pink-yellow-gradient,
-    url("/assets/photos/hero.jpg") no-repeat center / cover;
+    url("../../assets/photos/hero.jpg") no-repeat center / cover;
   padding-top: 30px;
 
   &__container {
@@ -67,24 +67,6 @@
       }
     }
   }
-
-  &:has(.nav-open) {
-    .nav {
-      opacity: 1;
-      pointer-events: auto;
-      visibility: visible;
-    }
-
-    .header__menu-button img {
-      &:first-of-type {
-        display: none;
-      }
-
-      &:last-of-type {
-        display: block;
-      }
-    }
-  }
 }
 
 .nav {
@@ -136,6 +118,24 @@
   &__icon {
     width: 20px;
     height: 20px;
+  }
+}
+
+.nav-open {
+  .nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .header__menu-button img {
+    &:first-of-type {
+      display: none;
+    }
+
+    &:last-of-type {
+      display: block;
+    }
   }
 }
 
