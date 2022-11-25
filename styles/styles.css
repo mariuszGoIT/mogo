@@ -359,10 +359,15 @@ input:focus {
 .gallery__element:hover img:not(.socials__icon) {
   translate: -10px -10px;
 }
+.gallery__element:hover .gallery__img::after {
+  opacity: 1;
+  translate: -10px -10px;
+}
 .gallery__img {
   width: 100%;
   height: 420px;
   background-color: var(--green);
+  position: relative;
 }
 .gallery__img img {
   width: 100%;
@@ -374,6 +379,19 @@ input:focus {
 .gallery__img--center {
   -o-object-position: 20%;
      object-position: 20%;
+}
+.gallery__img::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: unset;
+  left: unset;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+  opacity: 0;
+  transition: all 200ms;
 }
 .gallery__image-description {
   margin-top: 30px;
