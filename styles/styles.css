@@ -48,7 +48,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: min(1200px, 90%);
   margin-inline: auto;
 }
 
@@ -127,7 +127,7 @@ input:focus {
   padding-bottom: 50px;
 }
 .hero__slogan {
-  width: 800px;
+  width: min(800px, 100%);
   margin-inline: auto;
 }
 .hero__slogan p {
@@ -135,16 +135,17 @@ input:focus {
   text-align: center;
 }
 .hero__slogan p:first-of-type {
-  font-size: 72px;
+  font-size: clamp(32px, 6vw, 72px);
   font-weight: 700;
   font-family: var(--secondary-font);
   margin-bottom: 20px;
 }
 .hero__slogan p:last-of-type {
-  font-size: 130px;
+  font-size: clamp(46px, 10vw, 130px);
   font-weight: 700;
   line-height: 0.8;
   text-transform: uppercase;
+  text-align: center;
 }
 .hero__btn {
   margin-inline: auto;
@@ -250,6 +251,25 @@ input:focus {
   color: var(--gray);
 }
 
+@media (width <= 960px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width <= 610px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+  .services__grid-element {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
 .about {
   margin-top: 100px;
 }
@@ -257,7 +277,7 @@ input:focus {
   margin: 40px auto;
 }
 .about__paragraph {
-  width: 950px;
+  width: min(950px, 95%);
   margin-inline: auto;
   font-size: 15px;
   text-align: center;
@@ -352,6 +372,15 @@ input:focus {
   width: 25px;
 }
 
+@media (width <= 610px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: unset;
+    justify-content: unset;
+  }
+}
 .footer {
   margin-top: 80px;
 }
@@ -367,6 +396,7 @@ input:focus {
 .footer__copyright {
   font-weight: 500;
   font-size: 14px;
+  text-align: center;
 }
 .footer__link {
   color: var(--pink);
@@ -377,4 +407,23 @@ input:focus {
   gap: 0;
   align-items: center;
   justify-content: unset;
+}
+
+@media (width <= 750px) {
+  .footer__container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (width <= 450px) {
+  .footer__subscribe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: unset;
+    justify-content: unset;
+  }
 }/*# sourceMappingURL=styles.css.map */

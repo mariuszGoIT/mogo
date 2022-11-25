@@ -93,3 +93,9 @@
     width: 25px;
   }
 }
+
+@media (width <= 610px) {
+  .gallery {
+    @include flex(column, 40px);
+  }
+}

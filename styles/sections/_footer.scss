@@ -14,6 +14,7 @@
   &__copyright {
     font-weight: 500;
     font-size: 14px;
+    text-align: center;
   }
 
   &__link {
@@ -22,5 +23,17 @@
 
   &__subscribe-container {
     @include flex(row, 0, center);
+  }
+}
+
+@media (width <= 750px) {
+  .footer__container {
+    @include flex(column-reverse, 20px, center, space-between);
+  }
+}
+
+@media (width <= 450px) {
+  .footer__subscribe-container {
+    @include flex(column, 0, unset);
   }
 }

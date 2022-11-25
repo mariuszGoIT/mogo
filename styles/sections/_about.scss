@@ -8,7 +8,7 @@
   }
 
   &__paragraph {
-    width: 950px;
+    width: min(950px, 95%);
     margin-inline: auto;
     font-size: 15px;
     text-align: center;

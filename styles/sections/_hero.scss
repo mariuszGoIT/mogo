@@ -15,7 +15,7 @@
   }
 
   &__slogan {
-    width: 800px;
+    width: min(800px, 100%);
     margin-inline: auto;
 
     p {
@@ -23,17 +23,18 @@
       text-align: center;
 
       &:first-of-type {
-        font-size: 72px;
+        font-size: clamp(32px, 6vw, 72px);
         font-weight: 700;
         font-family: $secondary-font;
         margin-bottom: 20px;
       }
 
       &:last-of-type {
-        font-size: 130px;
+        font-size: clamp(46px, 10vw, 130px);
         font-weight: 700;
         line-height: 0.8;
         text-transform: uppercase;
+        text-align: center;
       }
     }
   }

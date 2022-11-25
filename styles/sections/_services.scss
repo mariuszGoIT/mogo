@@ -39,3 +39,23 @@
     color: $gray-color;
   }
 }
+
+@media (width <= 960px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width <= 610px) {
+  .services {
+    &__grid {
+      grid-template-columns: 1fr;
+      row-gap: 50px;
+    }
+
+    &__grid-element {
+      @include flex(column, 20px, center, center);
+      text-align: center;
+    }
+  }
+}
