@@ -8,7 +8,7 @@
   font-weight: 600;
   color: white;
   cursor: pointer;
-  transition: all 200ms;
+  transition: $default-transition;
 
   &:active {
     scale: 0.97;

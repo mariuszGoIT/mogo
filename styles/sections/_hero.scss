@@ -101,13 +101,13 @@
       height: 3px;
       background: $yellow-color;
       border-radius: 20px;
-      transition: all 200ms;
+      transition: $default-transition;
       scale: 0;
     }
 
     &:hover,
     &:focus {
-      transition: all 200ms;
+      transition: $default-transition;
       color: $yellow-color;
       outline: none;
 

@@ -429,7 +429,7 @@ input:focus {
   width: 25px;
 }
 
-@media (width <= 610px) {
+@media (width <= 960px) {
   .gallery {
     display: flex;
     flex-direction: column;
