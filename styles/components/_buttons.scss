@@ -20,4 +20,9 @@
       color: $pink-color;
     }
   }
+
+  &--secondary {
+    padding: 15px 35px;
+    background-color: $green-color;
+  }
 }

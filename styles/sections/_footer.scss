@@ -1,0 +1,43 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.footer {
+  margin-top: 80px;
+
+  &__container {
+    @include flex(row, 20px, center, space-between);
+
+    padding: 25px 0 20px;
+    border-top: 2px solid $gray-light-color;
+  }
+
+  &__copyright {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  &__link {
+    color: $pink-color;
+  }
+
+  &__subscribe-container {
+    @include flex(row, 0, center);
+  }
+
+  &__email-input {
+    padding: 13px 35px;
+    border: 2px solid $gray-light-color;
+    color: $gray-color;
+
+    &::placeholder {
+      font-size: 15px;
+      font-family: $third-font;
+      font-style: italic;
+      color: $gray-light-color;
+    }
+
+    &:focus {
+      outline-color: $gray-color;
+    }
+  }
+}
